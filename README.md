@@ -14,14 +14,14 @@ El Juego no está terminado y no es siquiera un beta, es posible navegar los pri
 
 El test de Zelda Remade es la versión 0.0.26 del juego, te aconsejo revisar los dos siguientes links para bajar y usar correctamente el juego:
 
-* [Link de desgarga](https://github.com/SpoonmanGames/BomberChan/archive/v0.4.zip).
-* [FAQ de uso](https://github.com/SpoonmanGames/BomberChan/releases).
+* [Link de desgarga]().
+* [FAQ de uso]().
 
 # Última versión
 
 La última versión en este repositorio es la v0.0.19 - *¿ Qué? ¿pero no que el test descargable es una versión superior=* - pues este código fuente ha sido rescatado y desenpolvado de lo más profundo de mi computador, si en algún momento logro encontrar la última versión del código fuente la subiré a este repositorio.
 
-Los controles y menú son iguales al test por lo que se recomienda revisar la [FAQ de uso](https://github.com/SpoonmanGames/BomberChan/releases).
+Los controles y menú son iguales al test por lo que se recomienda revisar la [FAQ de uso]().
 
 # Plataformas
 
