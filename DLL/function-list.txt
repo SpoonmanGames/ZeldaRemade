@@ -1,0 +1,1887 @@
+BENNU FUNCTIONS 
+--------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: libblit.dll
+
+Constants:
+
+DWORD B_HMIRROR = 1
+DWORD B_VMIRROR = 2
+DWORD B_TRANSLUCENT = 4
+DWORD B_ALPHA = 8
+DWORD B_ABLEND = 16
+DWORD B_SBLEND = 32
+DWORD B_NOCOLORKEY = 128
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: libdraw.dll
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: libfont.dll
+
+Module Dependency:
+
+libgrbase
+
+
+Internals callbacks:
+
+module_initialize
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: libgrbase.dll
+
+Globals:
+
+alpha_steps = 16;
+
+
+Globals vars dependency:
+
+alpha_steps
+
+
+Internals callbacks:
+
+module_initialize
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: libkey.dll
+
+Globals:
+
+   shift_status ; 
+   ascii ; 
+   scan_code ; 
+
+
+Module Dependency:
+
+libsdlhandler
+
+
+Globals vars dependency:
+
+shift_status
+ascii
+scan_code
+
+
+Internals callbacks:
+
+module_initialize
+module_finalize
+
+
+Hooks at priorities: 4900
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: libmouse.dll
+
+Globals:
+
+STRUCT mouse
+x, y;
+z = -512;
+file;
+graph;
+angle;
+size = 100;
+flags;
+region;
+left, middle, right;
+wheelup, wheeldown;
+END
+
+
+Module Dependency:
+
+libsdlhandler
+libgrbase
+libvideo
+libblit
+
+
+Globals vars dependency:
+
+mouse.x
+mouse.y
+mouse.z
+mouse.file
+mouse.graph
+mouse.angle
+mouse.size
+mouse.flags
+mouse.region
+mouse.left
+mouse.middle
+mouse.right
+mouse.wheelup
+mouse.wheeldown
+
+
+Internals callbacks:
+
+module_initialize
+
+
+Hooks at priorities: 4800
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: libpng-3.dll
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: libpng1.dll
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: libpng12-0.dll
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: librender.dll
+
+Constants:
+
+DWORD C_SCREEN = 0
+DWORD PARTIAL_DUMP = 0
+DWORD COMPLETE_DUMP = 1
+DWORD NO_RESTORE = -1
+DWORD PARTIAL_RESTORE = 0
+DWORD COMPLETE_RESTORE = 1
+DWORD BACKGROUND = 0
+DWORD SCREEN = -1
+DWORD SCALE_SCALE2X = 1
+DWORD SCALE_HQ2X = 2
+DWORD SCALE_SCANLINE2X = 3
+DWORD SCALE_NORMAL2X = 4
+DWORD SCALE_NOFILTER = 4
+
+
+Globals:
+
+fps;
+speed_gauge = 0;
+FLOAT frame_time = 0;
+restore_type;
+dump_type;
+fading;
+alpha_steps = 16;
+
+
+Locals:
+
+ctype;
+cnumber;
+x;
+y;
+z;
+file;
+graph;
+size = 100;
+angle;
+flags;
+alpha = 255;
+palette = 0;
+region;
+resolution;
+size_x = 100;
+size_y = 100;
+blendop = 0;
+pointer xgraph;
+STRUCT _render_reserved_
+  object_id = 0;
+  graph_ptr = 0;
+  xgraph_flags;
+  STRUCT _saved_
+    x;
+    y;
+    z;
+    file;
+    graph;
+    size;
+    angle;
+    flags;
+    alpha;
+    palette;
+    size_x;
+    size_y;
+    blendop;
+    pointer xgraph;
+  END 
+END 
+
+
+Module Dependency:
+
+libgrbase
+libvideo
+libblit
+
+
+Globals vars dependency:
+
+fps
+speed_gauge
+frame_time
+scale_mode
+restore_type
+dump_type
+fading
+alpha_steps
+
+
+Locals vars dependency:
+
+ctype
+cnumber
+x
+y
+z
+file
+graph
+size
+angle
+flags
+alpha
+palette
+region
+resolution
+size_x
+size_y
+blendop
+xgraph
+_render_reserved_.object_id
+_render_reserved_.graph_ptr
+_render_reserved_.xgraph_flags
+_render_reserved_._saved_.x
+_render_reserved_._saved_.y
+_render_reserved_._saved_.z
+_render_reserved_._saved_.file
+_render_reserved_._saved_.graph
+_render_reserved_._saved_.size
+_render_reserved_._saved_.angle
+_render_reserved_._saved_.flags
+_render_reserved_._saved_.alpha
+_render_reserved_._saved_.palette
+_render_reserved_._saved_.size_x
+_render_reserved_._saved_.size_y
+_render_reserved_._saved_.blendop
+_render_reserved_._saved_.xgraph
+reserved.status
+
+
+Internals callbacks:
+
+module_initialize
+module_finalize
+instance_create_hook
+instance_destroy_hook
+
+
+Hooks at priorities: 9500, 9000
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: libscroll.dll
+
+Constants:
+
+DWORD C_SCROLL = 1
+DWORD C_0 = 1
+DWORD C_1 = 2
+DWORD C_2 = 4
+DWORD C_3 = 8
+DWORD C_4 = 16
+DWORD C_5 = 32
+DWORD C_6 = 64
+DWORD C_7 = 128
+DWORD C_8 = 256
+DWORD C_9 = 512
+
+
+Globals:
+
+STRUCT scroll[9]
+x0, y0;
+x1, y1;
+z = 512;
+camera;
+ratio = 200;
+speed;
+region1 = -1;
+region2 = -1;
+flags1;
+flags2;
+follow = -1;
+reserved[6];
+END 
+
+
+Locals:
+
+ctype;
+cnumber;
+
+
+Module Dependency:
+
+libgrbase
+libblit
+librender
+libvideo
+
+
+Globals vars dependency:
+
+scroll
+
+
+Locals vars dependency:
+
+ctype
+cnumber
+id
+reserved.status
+x
+y
+z
+resolution
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: libsdlhandler.dll
+
+Internals callbacks:
+
+module_initialize
+module_finalize
+
+
+Hooks at priorities: 5000, 2000
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: libtext.dll
+
+Globals:
+
+text_z = -256;
+text_flags;
+
+
+Module Dependency:
+
+libgrbase
+libblit
+librender
+libfont
+
+
+Globals vars dependency:
+
+text_z
+text_flags
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: libvideo.dll
+
+Constants:
+
+DWORD M320X200 = 3200200
+DWORD M320X240 = 3200240
+DWORD M320X400 = 3200400
+DWORD M360X240 = 3600240
+DWORD M376X282 = 3760282
+DWORD M400X300 = 4000300
+DWORD M512X384 = 5120384
+DWORD M640X400 = 6400400
+DWORD M640X480 = 6400480
+DWORD M800X600 = 8000600
+DWORD M1024X768 = 10240768
+DWORD M1280X1024 = 12801024
+DWORD MODE_WINDOW = 0
+DWORD MODE_2XSCALE = 256
+DWORD MODE_FULLSCREEN = 512
+DWORD MODE_DOUBLEBUFFER = 1024
+DWORD MODE_HARDWARE = 2048
+DWORD MODE_WAITVSYNC = 16384
+DWORD WAITVSYNC = 16384
+DWORD DOUBLE_BUFFER = 1024
+DWORD HW_SURFACE = 2048
+DWORD MODE_8BITS = 8
+DWORD MODE_16BITS = 16
+DWORD MODE_32BITS = 32
+DWORD MODE_8BPP = 8
+DWORD MODE_16BPP = 16
+DWORD MODE_32BPP = 32
+DWORD MODE_MODAL = 4096
+DWORD MODE_FRAMELESS = 8192
+DWORD SCALE_NONE = 0
+
+
+Globals:
+
+graph_mode = 0;
+scale_mode = 0;
+full_screen = 0;
+
+
+Module Dependency:
+
+libgrbase
+
+
+Globals vars dependency:
+
+graph_mode
+scale_mode
+full_screen
+
+
+Internals callbacks:
+
+module_initialize
+module_finalize
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: libwm.dll
+
+Globals:
+
+exit_status = 0;
+window_status = 1;
+focus_status = 1;
+mouse_status = 1;
+
+
+Module Dependency:
+
+libsdlhandler
+
+
+Globals vars dependency:
+
+exit_status
+window_status
+focus_status
+mouse_status
+
+
+Hooks at priorities: 4700
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_blendop.dll
+
+Functions:
+
+INT BLENDOP_NEW()
+INT BLENDOP_IDENTITY(INTEGER)
+INT BLENDOP_TINT(INTEGER, FLOAT, INTEGER, INTEGER, INTEGER)
+INT BLENDOP_TRANSLUCENCY(INTEGER, FLOAT)
+INT BLENDOP_INTENSITY(INTEGER, FLOAT)
+INT BLENDOP_SWAP(INTEGER)
+INT BLENDOP_ASSIGN(INTEGER, INTEGER, INTEGER)
+INT BLENDOP_APPLY(INTEGER, INTEGER, INTEGER)
+INT BLENDOP_FREE(INTEGER)
+INT BLENDOP_GRAYSCALE(INTEGER, INTEGER)
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_cd.dll
+
+Constants:
+
+INT CD_TRAYEMPTY = 0
+INT CD_STOPPED = 1
+INT CD_PLAYING = 2
+INT CD_PAUSED = 3
+INT CD_ERROR = -1
+
+
+Globals:
+
+STRUCT cdinfo
+ current_track;
+ current_frame;
+ tracks;
+ minute;
+ second;
+ subframe;
+ minutes;
+ seconds;
+ subframes;
+ STRUCT track[99]
+  audio;
+  minutes;
+  seconds;
+  subframes;
+ END;
+END;
+
+
+Functions:
+
+INT CD_DRIVES()
+INT CD_STATUS(INTEGER)
+STRING CD_NAME(INTEGER)
+INT CD_GETINFO(INTEGER)
+INT CD_PLAY(INTEGER, INTEGER)
+INT CD_PLAY(INTEGER, INTEGER, INTEGER)
+INT CD_STOP(INTEGER)
+INT CD_PAUSE(INTEGER)
+INT CD_RESUME(INTEGER)
+INT CD_EJECT(INTEGER)
+
+
+Globals vars dependency:
+
+cdinfo.current_track
+cdinfo.current_frame
+cdinfo.tracks
+cdinfo.minute
+cdinfo.second
+cdinfo.subframe
+cdinfo.minutes
+cdinfo.seconds
+cdinfo.subframes
+cdinfo.track
+
+
+Internals callbacks:
+
+module_initialize
+module_finalize
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_debug.dll
+
+Module Dependency:
+
+libkey
+librender
+
+
+Globals vars dependency:
+
+shift_status
+
+
+Locals vars dependency:
+
+id
+father
+bigbro
+son
+reserved.status
+
+
+Internals callbacks:
+
+module_initialize
+module_finalize
+process_exec_hook
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_dir.dll
+
+Globals:
+
+STRUCT fileinfo
+    STRING path;
+    STRING name;
+    directory;
+    hidden;
+    readonly;
+    size;
+    STRING created;
+    STRING modified;
+END
+
+
+Functions:
+
+STRING CD()
+INT CHDIR(STRING)
+INT MKDIR(STRING)
+INT RMDIR(STRING)
+STRING GLOB(STRING)
+STRING CD(STRING)
+INT RM(STRING)
+
+
+Globals vars dependency:
+
+fileinfo.path
+fileinfo.name
+fileinfo.directory
+fileinfo.hidden
+fileinfo.readonly
+fileinfo.size
+fileinfo.created
+fileinfo.modified
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_draw.dll
+
+Functions:
+
+INT DRAWING_MAP(INTEGER, INTEGER)
+INT DRAWING_COLOR(INTEGER)
+INT DRAW_LINE(INTEGER, INTEGER, INTEGER, INTEGER)
+INT DRAW_RECT(INTEGER, INTEGER, INTEGER, INTEGER)
+INT DRAW_BOX(INTEGER, INTEGER, INTEGER, INTEGER)
+INT DRAW_CIRCLE(INTEGER, INTEGER, INTEGER)
+INT DRAW_FCIRCLE(INTEGER, INTEGER, INTEGER)
+INT DRAW_CURVE(INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER)
+INT DRAWING_Z(INTEGER)
+INT DELETE_DRAW(INTEGER)
+INT MOVE_DRAW(INTEGER, INTEGER, INTEGER)
+INT DRAWING_ALPHA(INTEGER)
+INT DRAWING_STIPPLE(INTEGER)
+INT PUT_PIXEL(INTEGER, INTEGER, INTEGER)
+INT GET_PIXEL(INTEGER, INTEGER)
+INT MAP_GET_PIXEL(INTEGER, INTEGER, INTEGER, INTEGER)
+INT MAP_PUT_PIXEL(INTEGER, INTEGER, INTEGER, INTEGER, INTEGER)
+
+
+Module Dependency:
+
+libgrbase
+librender
+libdraw
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_effects.dll
+
+Functions:
+
+INT GRAYSCALE(INTEGER, INTEGER, BYTE)
+INT RGBSCALE(INTEGER, INTEGER, FLOAT, FLOAT, FLOAT)
+INT BLUR(INTEGER, INTEGER, BYTE)
+INT FILTER(INTEGER, INTEGER, POINTER)
+
+
+Module Dependency:
+
+libgrbase
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_file.dll
+
+Constants:
+
+INT O_READ = 0
+INT O_READWRITE = 1
+INT O_RDWR = 1
+INT O_WRITE = 2
+INT O_ZREAD = 3
+INT O_ZWRITE = 4
+INT SEEK_SET = 0
+INT SEEK_CUR = 1
+INT SEEK_END = 2
+
+
+Functions:
+
+INT SAVE(STRING, VARIABLE)
+INT LOAD(STRING, VARIABLE)
+INT FOPEN(STRING, INTEGER)
+INT FCLOSE(INTEGER)
+INT FREAD(INTEGER, VARIABLE)
+INT FREAD(POINTER, INTEGER, INTEGER)
+INT FWRITE(INTEGER, VARIABLE)
+INT FWRITE(POINTER, INTEGER, INTEGER)
+INT FSEEK(INTEGER, INTEGER, INTEGER)
+INT FTELL(INTEGER)
+INT FLENGTH(INTEGER)
+INT FPUTS(INTEGER, STRING)
+STRING FGETS(INTEGER)
+INT FEOF(INTEGER)
+STRING FILE(STRING)
+INT FILE_EXISTS(STRING)
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_flic.dll
+
+Functions:
+
+INT START_FLI(STRING, INTEGER, INTEGER)
+INT END_FLI()
+INT FRAME_FLI()
+INT RESET_FLI()
+INT FLI_START(STRING, INTEGER, INTEGER)
+INT FLI_START(STRING, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER)
+INT FLI_END(INTEGER)
+INT FLI_FRAME(INTEGER)
+INT FLI_RESET(INTEGER)
+INT FLI_PARAMS(INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER)
+INT FLI_MOVE(INTEGER, INTEGER, INTEGER)
+INT FLI_ANGLE(INTEGER, INTEGER)
+INT FLI_SIZE(INTEGER, INTEGER)
+INT FLI_FLAGS(INTEGER, INTEGER)
+INT FLI_Z(INTEGER, INTEGER)
+INT FLI_GETINFO(INTEGER, POINTER, POINTER, POINTER, POINTER, POINTER, POINTER, POINTER, POINTER, POINTER)
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_grproc.dll
+
+Locals:
+
+STRUCT _mod_grproc_reserved
+int type_scan;
+int id_scan;
+END
+
+
+Functions:
+
+INT ADVANCE(INTEGER)
+INT XADVANCE(INTEGER, INTEGER)
+INT GET_ANGLE(INTEGER)
+INT GET_DIST(INTEGER)
+INT COLLISION(INTEGER)
+INT GET_REAL_POINT(INTEGER, POINTER, POINTER)
+
+
+Module Dependency:
+
+libmouse
+libgrbase
+libvideo
+librender
+libblit
+
+
+Globals vars dependency:
+
+mouse.x
+mouse.y
+scroll
+
+
+Locals vars dependency:
+
+_mod_grproc_reserved.type_scan
+_mod_grproc_reserved.id_scan
+id
+reserved.process_type
+reserved.status
+ctype
+cnumber
+x
+y
+angle
+size
+size_x
+size_y
+flags
+region
+resolution
+xgraph
+
+
+Internals callbacks:
+
+process_exec_hook
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_joy.dll
+
+Constants:
+
+DWORD JOY_HAT_CENTERED = 0
+DWORD JOY_HAT_UP = 1
+DWORD JOY_HAT_RIGHT = 2
+DWORD JOY_HAT_DOWN = 4
+DWORD JOY_HAT_LEFT = 8
+DWORD JOY_HAT_RIGHTUP = 3
+DWORD JOY_HAT_RIGHTDOWN = 6
+DWORD JOY_HAT_LEFTUP = 9
+DWORD JOY_HAT_LEFTDOWN = 12
+
+
+Functions:
+
+INT JOY_AXES()
+INT JOY_AXES(INTEGER)
+INT JOY_NUMAXES()
+INT JOY_NUMAXES(INTEGER)
+INT JOY_GETAXIS(INTEGER)
+INT JOY_GETAXIS(INTEGER, INTEGER)
+INT JOY_BUTTONS()
+INT JOY_BUTTONS(INTEGER)
+STRING JOY_NAME(INTEGER)
+INT JOY_NUMBUTTONS()
+INT JOY_NUMBUTTONS(INTEGER)
+INT JOY_NUMBER()
+INT JOY_NUMJOYSTICKS()
+INT JOY_SELECT(INTEGER)
+INT JOY_GETBUTTON(INTEGER)
+INT JOY_GETBUTTON(INTEGER, INTEGER)
+INT JOY_GETPOSITION(INTEGER)
+INT JOY_GETPOSITION(INTEGER, INTEGER)
+INT JOY_NUMHATS()
+INT JOY_NUMHATS(INTEGER)
+INT JOY_NUMBALLS()
+INT JOY_NUMBALLS(INTEGER)
+INT JOY_GETHAT(INTEGER)
+INT JOY_GETHAT(INTEGER, INTEGER)
+INT JOY_GETBALL(INTEGER, POINTER, POINTER)
+INT JOY_GETBALL(INTEGER, INTEGER, POINTER, POINTER)
+INT NUMBER_JOY()
+INT SELECT_JOY(INTEGER)
+INT GET_JOY_BUTTON(INTEGER)
+INT GET_JOY_BUTTON(INTEGER, INTEGER)
+INT GET_JOY_POSITION(INTEGER)
+INT GET_JOY_POSITION(INTEGER, INTEGER)
+
+
+Internals callbacks:
+
+module_initialize
+module_finalize
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_key.dll
+
+Constants:
+
+DWORD _ESC = 1
+DWORD _1 = 2
+DWORD _2 = 3
+DWORD _3 = 4
+DWORD _4 = 5
+DWORD _5 = 6
+DWORD _6 = 7
+DWORD _7 = 8
+DWORD _8 = 9
+DWORD _9 = 10
+DWORD _0 = 11
+DWORD _MINUS = 12
+DWORD _PLUS = 13
+DWORD _BACKSPACE = 14
+DWORD _TAB = 15
+DWORD _Q = 16
+DWORD _W = 17
+DWORD _E = 18
+DWORD _R = 19
+DWORD _T = 20
+DWORD _Y = 21
+DWORD _U = 22
+DWORD _I = 23
+DWORD _O = 24
+DWORD _P = 25
+DWORD _L_BRACHET = 26
+DWORD _R_BRACHET = 27
+DWORD _ENTER = 28
+DWORD _C_ENTER = 28
+DWORD _CONTROL = 29
+DWORD _A = 30
+DWORD _S = 31
+DWORD _D = 32
+DWORD _F = 33
+DWORD _G = 34
+DWORD _H = 35
+DWORD _J = 36
+DWORD _K = 37
+DWORD _L = 38
+DWORD _SEMICOLON = 39
+DWORD _APOSTROPHE = 40
+DWORD _WAVE = 41
+DWORD _L_SHIFT = 42
+DWORD _BACKSLASH = 43
+DWORD _Z = 44
+DWORD _X = 45
+DWORD _C = 46
+DWORD _V = 47
+DWORD _B = 48
+DWORD _N = 49
+DWORD _M = 50
+DWORD _COMMA = 51
+DWORD _POINT = 52
+DWORD _SLASH = 53
+DWORD _C_BACKSLASH = 53
+DWORD _R_SHIFT = 54
+DWORD _C_ASTERISK = 55
+DWORD _PRN_SCR = 55
+DWORD _ALT = 56
+DWORD _SPACE = 57
+DWORD _CAPS_LOCK = 58
+DWORD _F1 = 59
+DWORD _F2 = 60
+DWORD _F3 = 61
+DWORD _F4 = 62
+DWORD _F5 = 63
+DWORD _F6 = 64
+DWORD _F7 = 65
+DWORD _F8 = 66
+DWORD _F9 = 67
+DWORD _F10 = 68
+DWORD _NUM_LOCK = 69
+DWORD _SCROLL_LOCK = 70
+DWORD _HOME = 71
+DWORD _C_HOME = 71
+DWORD _UP = 72
+DWORD _C_UP = 72
+DWORD _PGUP = 73
+DWORD _C_PGUP = 73
+DWORD _C_MINUS = 74
+DWORD _LEFT = 75
+DWORD _C_LEFT = 75
+DWORD _C_CENTER = 76
+DWORD _RIGHT = 77
+DWORD _C_RIGHT = 77
+DWORD _C_PLUS = 78
+DWORD _END = 79
+DWORD _C_END = 79
+DWORD _DOWN = 80
+DWORD _C_DOWN = 80
+DWORD _PGDN = 81
+DWORD _C_PGDN = 81
+DWORD _INS = 82
+DWORD _C_INS = 82
+DWORD _DEL = 83
+DWORD _C_DEL = 83
+DWORD _F11 = 87
+DWORD _F12 = 88
+DWORD _LESS = 89
+DWORD _EQUALS = 90
+DWORD _GREATER = 91
+DWORD _ASTERISK = 92
+DWORD _R_ALT = 93
+DWORD _R_CONTROL = 94
+DWORD _L_ALT = 95
+DWORD _L_CONTROL = 96
+DWORD _MENU = 97
+DWORD _L_WINDOWS = 98
+DWORD _R_WINDOWS = 99
+
+
+Functions:
+
+INT KEY(INTEGER)
+
+
+Module Dependency:
+
+libkey
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_m7.dll
+
+Constants:
+
+INT C_M7 = 2
+
+
+Globals:
+
+STRUCT m7[9]
+camera;
+height = 32;
+distance = 64;
+horizon = 0;
+focus = 256;
+z = 256;
+color = 0;
+flags = 0;
+END
+
+
+Locals:
+
+ctype;
+cnumber;
+height;
+struct _m7_reserved
+distance1;
+end;
+
+
+Functions:
+
+INT MODE7_START(INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER)
+INT MODE7_STOP(INTEGER)
+INT START_MODE7(INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER)
+INT STOP_MODE7(INTEGER)
+
+
+Module Dependency:
+
+libgrbase
+libvideo
+librender
+
+
+Globals vars dependency:
+
+m7
+
+
+Locals vars dependency:
+
+angle
+cnumber
+x
+y
+ctype
+_m7_reserved.distance1
+size
+height
+reserved.status
+resolution
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_map.dll
+
+Constants:
+
+INT G_WIDE = 0
+INT G_WIDTH = 0
+INT G_HEIGHT = 1
+INT G_CENTER_X = 2
+INT G_X_CENTER = 2
+INT G_CENTER_Y = 3
+INT G_Y_CENTER = 3
+INT G_PITCH = 4
+INT G_DEPTH = 5
+
+
+Functions:
+
+INT MAP_BLOCK_COPY(INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER)
+INT MAP_PUT(INTEGER, INTEGER, INTEGER, INTEGER, INTEGER)
+INT MAP_XPUT(INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER)
+INT MAP_NEW(INTEGER, INTEGER, INTEGER)
+INT MAP_CLEAR(INTEGER, INTEGER, INTEGER)
+INT MAP_CLONE(INTEGER, INTEGER)
+STRING MAP_NAME(INTEGER, INTEGER)
+INT MAP_SET_NAME(INTEGER, INTEGER, STRING)
+INT MAP_EXISTS(INTEGER, INTEGER)
+INT MAP_XPUTNP(INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER)
+INT MAP_DEL(INTEGER, INTEGER)
+INT MAP_UNLOAD(INTEGER, INTEGER)
+INT MAP_LOAD(STRING)
+INT MAP_SAVE(INTEGER, INTEGER, STRING)
+POINTER MAP_BUFFER(INTEGER, INTEGER)
+INT FPG_ADD(INTEGER, INTEGER, INTEGER, INTEGER)
+INT FPG_NEW()
+INT FPG_EXISTS(INTEGER)
+INT FPG_LOAD(STRING)
+INT FPG_LOAD(STRING, POINTER)
+INT FPG_SAVE(INTEGER, STRING)
+INT FPG_DEL(INTEGER)
+INT FPG_UNLOAD(INTEGER)
+INT PAL_NEW()
+INT PAL_DEL(INTEGER)
+INT PAL_UNLOAD(INTEGER)
+INT PAL_CLONE(INTEGER)
+INT PAL_REFRESH()
+INT PAL_REFRESH(INTEGER)
+INT PAL_MAP_GETID(INTEGER, INTEGER)
+INT PAL_MAP_ASSIGN(INTEGER, INTEGER, INTEGER)
+INT PAL_MAP_REMOVE(INTEGER, INTEGER)
+INT PAL_GET(INTEGER, INTEGER, POINTER)
+INT PAL_GET(INTEGER, INTEGER, INTEGER, POINTER)
+INT PAL_SET(INTEGER, INTEGER, POINTER)
+INT PAL_SET(INTEGER, INTEGER, INTEGER, POINTER)
+INT PAL_SAVE(STRING)
+INT PAL_SAVE(STRING, INTEGER)
+INT PAL_LOAD(STRING)
+INT COLORS_SET(INTEGER, INTEGER, POINTER)
+INT COLORS_SET(INTEGER, INTEGER, INTEGER, POINTER)
+INT COLORS_GET(INTEGER, INTEGER, POINTER)
+INT COLORS_GET(INTEGER, INTEGER, INTEGER, POINTER)
+INT PALETTE_ROLL(INTEGER, INTEGER, INTEGER)
+INT PALETTE_CONVERT(INTEGER, INTEGER, POINTER)
+INT COLOR_FIND(BYTE, BYTE, BYTE)
+INT RGB(BYTE, BYTE, BYTE)
+INT RGBA(BYTE, BYTE, BYTE, BYTE)
+INT RGB_GET(INTEGER, POINTER, POINTER, POINTER)
+INT RGBA_GET(INTEGER, POINTER, POINTER, POINTER, POINTER)
+INT FADE(INTEGER, INTEGER, INTEGER, INTEGER)
+INT FADE_ON()
+INT FADE_OFF()
+INT MAP_INFO_SET(INTEGER, INTEGER, INTEGER, INTEGER)
+INT MAP_INFO_GET(INTEGER, INTEGER, INTEGER)
+INT MAP_INFO(INTEGER, INTEGER, INTEGER)
+INT GRAPHIC_SET(INTEGER, INTEGER, INTEGER, INTEGER)
+INT GRAPHIC_INFO(INTEGER, INTEGER, INTEGER)
+INT POINT_GET(INTEGER, INTEGER, INTEGER, POINTER, POINTER)
+INT POINT_SET(INTEGER, INTEGER, INTEGER, INTEGER, INTEGER)
+INT CENTER_SET(INTEGER, INTEGER, INTEGER, INTEGER)
+INT FNT_LOAD(STRING)
+INT FNT_UNLOAD(INTEGER)
+INT FNT_SAVE(INTEGER, STRING)
+INT FNT_NEW(INTEGER)
+INT BDF_LOAD(STRING)
+INT GLYPH_GET(INTEGER, INTEGER)
+INT GLYPH_SET(INTEGER, INTEGER, INTEGER, INTEGER)
+INT PNG_LOAD(STRING)
+INT PCX_LOAD(STRING)
+INT PNG_SAVE(INTEGER, INTEGER, STRING)
+INT NEW_MAP(INTEGER, INTEGER, INTEGER)
+INT LOAD_MAP(STRING)
+INT UNLOAD_MAP(INTEGER, INTEGER)
+INT SAVE_MAP(INTEGER, INTEGER, STRING)
+INT NEW_PAL()
+INT LOAD_PAL(STRING)
+INT UNLOAD_PAL(INTEGER)
+INT SAVE_PAL(STRING)
+INT SAVE_PAL(STRING, INTEGER)
+INT SET_COLORS(INTEGER, INTEGER, POINTER)
+INT SET_COLORS(INTEGER, INTEGER, INTEGER, POINTER)
+INT GET_COLORS(INTEGER, INTEGER, POINTER)
+INT GET_COLORS(INTEGER, INTEGER, INTEGER, POINTER)
+INT ROLL_PALETTE(INTEGER, INTEGER, INTEGER)
+INT CONVERT_PALETTE(INTEGER, INTEGER, POINTER)
+INT FIND_COLOR(BYTE, BYTE, BYTE)
+INT GET_RGB(INTEGER, POINTER, POINTER, POINTER)
+INT GET_RGBA(INTEGER, POINTER, POINTER, POINTER, POINTER)
+INT NEW_FPG()
+INT LOAD_FPG(STRING)
+INT LOAD_FPG(STRING, POINTER)
+INT SAVE_FPG(INTEGER, STRING)
+INT UNLOAD_FPG(INTEGER)
+INT GET_POINT(INTEGER, INTEGER, INTEGER, POINTER, POINTER)
+INT SET_POINT(INTEGER, INTEGER, INTEGER, INTEGER, INTEGER)
+INT SET_CENTER(INTEGER, INTEGER, INTEGER, INTEGER)
+INT NEW_FNT(INTEGER)
+INT LOAD_FNT(STRING)
+INT UNLOAD_FNT(INTEGER)
+INT SAVE_FNT(INTEGER, STRING)
+INT LOAD_BDF(STRING)
+INT GET_GLYPH(INTEGER, INTEGER)
+INT SET_GLYPH(INTEGER, INTEGER, INTEGER, INTEGER)
+INT LOAD_PNG(STRING)
+INT LOAD_PCX(STRING)
+INT SAVE_PNG(INTEGER, INTEGER, STRING)
+
+
+Module Dependency:
+
+libgrbase
+libvideo
+libblit
+libfont
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_math.dll
+
+Constants:
+
+INT PI = 180000
+
+
+Functions:
+
+FLOAT ABS(FLOAT)
+FLOAT POW(FLOAT, FLOAT)
+FLOAT SQRT(FLOAT)
+FLOAT COS(FLOAT)
+FLOAT SIN(FLOAT)
+FLOAT TAN(FLOAT)
+FLOAT ACOS(FLOAT)
+FLOAT ASIN(FLOAT)
+FLOAT ATAN(FLOAT)
+INT FGET_ANGLE(INTEGER, INTEGER, INTEGER, INTEGER)
+INT FGET_DIST(INTEGER, INTEGER, INTEGER, INTEGER)
+INT NEAR_ANGLE(INTEGER, INTEGER, INTEGER)
+INT GET_DISTX(INTEGER, INTEGER)
+INT GET_DISTY(INTEGER, INTEGER)
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_mem.dll
+
+Functions:
+
+POINTER MEM_ALLOC(INTEGER)
+INT MEM_FREE(POINTER)
+POINTER MEM_REALLOC(POINTER, INTEGER)
+INT MEM_CMP(POINTER, POINTER, INTEGER)
+INT MEM_SET(POINTER, BYTE, INTEGER)
+INT MEM_SETW(POINTER, WORD, INTEGER)
+INT MEM_SETI(POINTER, INTEGER, INTEGER)
+INT MEM_COPY(POINTER, POINTER, INTEGER)
+INT MEM_MOVE(POINTER, POINTER, INTEGER)
+INT MEM_AVAILABLE()
+INT MEM_TOTAL()
+POINTER ALLOC(INTEGER)
+INT FREE(POINTER)
+POINTER REALLOC(POINTER, INTEGER)
+INT MEMCMP(POINTER, POINTER, INTEGER)
+INT MEMSET(POINTER, BYTE, INTEGER)
+INT MEMSETW(POINTER, WORD, INTEGER)
+INT MEMSETI(POINTER, INTEGER, INTEGER)
+INT MEMCOPY(POINTER, POINTER, INTEGER)
+INT MEMMOVE(POINTER, POINTER, INTEGER)
+INT MEMORY_FREE()
+INT MEMORY_TOTAL()
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_mouse.dll
+
+Module Dependency:
+
+libmouse
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_path.dll
+
+Constants:
+
+INT PF_NODIAG = 1
+INT PF_REVERSE = 2
+
+
+Functions:
+
+INT PATH_FIND(INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER)
+INT PATH_GETXY(POINTER, POINTER)
+INT PATH_WALL(INTEGER)
+
+
+Module Dependency:
+
+libgrbase
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_proc.dll
+
+Constants:
+
+INT S_KILL = 0
+INT S_WAKEUP = 1
+INT S_SLEEP = 2
+INT S_FREEZE = 3
+INT S_KILL_TREE = 100
+INT S_WAKEUP_TREE = 101
+INT S_SLEEP_TREE = 102
+INT S_FREEZE_TREE = 103
+INT S_KILL_FORCE = 50
+INT S_WAKEUP_FORCE = 51
+INT S_SLEEP_FORCE = 52
+INT S_FREEZE_FORCE = 53
+INT S_KILL_TREE_FORCE = 150
+INT S_WAKEUP_TREE_FORCE = 151
+INT S_SLEEP_TREE_FORCE = 152
+INT S_FREEZE_TREE_FORCE = 153
+INT S_DFL = 0
+INT S_IGN = 1
+INT ALL_PROCESS = 0
+
+
+Locals:
+
+STRUCT mod_proc_reserved
+   int type_scan;
+   int id_scan;
+   dword signal_action;
+END
+
+
+Functions:
+
+INT GET_ID(INTEGER)
+INT GET_STATUS(INTEGER)
+INT SIGNAL(INTEGER, INTEGER)
+INT SIGNAL_ACTION(INTEGER, INTEGER)
+INT SIGNAL_ACTION(INTEGER, INTEGER, INTEGER)
+INT LET_ME_ALONE()
+INT EXIT(STRING, INTEGER)
+INT EXIT(STRING)
+INT EXIT()
+INT EXISTS(INTEGER)
+
+
+Locals vars dependency:
+
+id
+reserved.process_type
+reserved.status
+mod_proc_reserved.id_scan
+mod_proc_reserved.type_scan
+mod_proc_reserved.signal_action
+
+
+Internals callbacks:
+
+process_exec_hook
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_rand.dll
+
+Functions:
+
+INT RAND_SEED(INTEGER)
+INT RAND(INTEGER, INTEGER)
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_regex.dll
+
+Globals:
+
+STRING regex_reg[15];
+
+
+Functions:
+
+INT REGEX(STRING, STRING)
+STRING REGEX_REPLACE(STRING, STRING, STRING)
+INT SPLIT(STRING, STRING, POINTER, INTEGER)
+STRING JOIN(STRING, POINTER, INTEGER)
+
+
+Globals vars dependency:
+
+regex_reg
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_say.dll
+
+Functions:
+
+UNDEFINED SAY(STRING)
+UNDEFINED SAY_FAST(STRING)
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_screen.dll
+
+Functions:
+
+INT REGION_DEFINE(INTEGER, INTEGER, INTEGER, INTEGER, INTEGER)
+INT REGION_OUT(INTEGER, INTEGER)
+INT PUT(INTEGER, INTEGER, INTEGER, INTEGER)
+INT XPUT(INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER)
+INT SCREEN_PUT(INTEGER, INTEGER)
+INT SCREEN_CLEAR()
+INT SCREEN_GET()
+INT DEFINE_REGION(INTEGER, INTEGER, INTEGER, INTEGER, INTEGER)
+INT OUT_REGION(INTEGER, INTEGER)
+INT PUT_SCREEN(INTEGER, INTEGER)
+INT CLEAR_SCREEN()
+INT GET_SCREEN()
+
+
+Module Dependency:
+
+libgrbase
+libvideo
+libblit
+librender
+
+
+Globals vars dependency:
+
+scroll
+
+
+Locals vars dependency:
+
+ctype
+cnumber
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_scroll.dll
+
+Functions:
+
+INT SCROLL_START(INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER)
+INT SCROLL_STOP(INTEGER)
+INT SCROLL_MOVE(INTEGER)
+INT START_SCROLL(INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER)
+INT STOP_SCROLL(INTEGER)
+INT MOVE_SCROLL(INTEGER)
+
+
+Module Dependency:
+
+libscroll
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_sort.dll
+
+Functions:
+
+INT QUICKSORT(POINTER, INTEGER, INTEGER, INTEGER, BYTE, BYTE)
+INT KSORT(VARIABLE, VARIABLE)
+INT KSORT(VARIABLE, VARIABLE, INTEGER)
+INT SORT(VARIABLE, INTEGER)
+INT SORT(VARIABLE)
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_sound.dll
+
+Constants:
+
+INT MODE_MONO = 0
+INT MODE_STEREO = 1
+INT ALL_SOUND = -1
+
+
+Globals:
+
+   sound_freq = 22050 ;
+   sound_mode = MODE_STEREO ;
+   sound_channels = 8 ;
+
+
+Functions:
+
+INT LOAD_SONG(STRING)
+INT PLAY_SONG(INTEGER, INTEGER)
+INT UNLOAD_SONG(INTEGER)
+INT STOP_SONG()
+INT PAUSE_SONG()
+INT RESUME_SONG()
+INT SET_SONG_VOLUME(INTEGER)
+INT IS_PLAYING_SONG()
+INT LOAD_WAV(STRING)
+INT PLAY_WAV(INTEGER, INTEGER)
+INT UNLOAD_WAV(INTEGER)
+INT STOP_WAV(INTEGER)
+INT PAUSE_WAV(INTEGER)
+INT RESUME_WAV(INTEGER)
+INT IS_PLAYING_WAV(INTEGER)
+INT SET_WAV_VOLUME(INTEGER, INTEGER)
+INT FADE_MUSIC_IN(INTEGER, INTEGER, INTEGER)
+INT FADE_MUSIC_OFF(INTEGER)
+INT SET_CHANNEL_VOLUME(INTEGER, INTEGER)
+INT RESERVE_CHANNELS(INTEGER)
+INT SET_PANNING(INTEGER, INTEGER, INTEGER)
+INT SET_POSITION(INTEGER, INTEGER, INTEGER)
+INT SET_DISTANCE(INTEGER, INTEGER)
+INT REVERSE_STEREO(INTEGER, INTEGER)
+INT PLAY_WAV(INTEGER, INTEGER, INTEGER)
+
+
+Globals vars dependency:
+
+sound_freq
+sound_mode
+sound_channels
+
+
+Internals callbacks:
+
+module_initialize
+module_finalize
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_string.dll
+
+Functions:
+
+INT LEN(STRING)
+STRING UCASE(STRING)
+STRING LCASE(STRING)
+INT STRCASECMP(STRING, STRING)
+STRING SUBSTR(STRING, INTEGER, INTEGER)
+STRING SUBSTR(STRING, INTEGER)
+INT FIND(STRING, STRING)
+INT FIND(STRING, STRING, INTEGER)
+STRING LPAD(STRING, INTEGER)
+STRING RPAD(STRING, INTEGER)
+STRING ITOA(INTEGER)
+STRING FTOA(FLOAT)
+INT ATOI(STRING)
+FLOAT ATOF(STRING)
+BYTE ASC(STRING)
+STRING CHR(INTEGER)
+STRING TRIM(STRING)
+STRING STRREV(STRING)
+STRING FORMAT(INTEGER)
+STRING FORMAT(FLOAT)
+STRING FORMAT(FLOAT, INTEGER)
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_sys.dll
+
+Constants:
+
+DWORD _P_WAIT = 0
+DWORD _P_NOWAIT = 1
+
+
+Functions:
+
+STRING GETENV(STRING)
+INT EXEC(INTEGER, STRING, INTEGER, POINTER)
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_text.dll
+
+Constants:
+
+INT ALL_TEXT = 0
+INT ALIGN_TOP_LEFT = 0
+INT ALIGN_TOP = 1
+INT ALIGN_TOP_RIGHT = 2
+INT ALIGN_CENTER_LEFT = 3
+INT ALIGN_CENTER = 4
+INT ALIGN_CENTER_RIGHT = 5
+INT ALIGN_BOTTOM_LEFT = 6
+INT ALIGN_BOTTOM = 7
+INT ALIGN_BOTTOM_RIGHT = 8
+
+
+Functions:
+
+INT WRITE(INTEGER, INTEGER, INTEGER, INTEGER, STRING)
+INT WRITE_INT(INTEGER, INTEGER, INTEGER, INTEGER, POINTER)
+INT MOVE_TEXT(INTEGER, INTEGER, INTEGER)
+INT DELETE_TEXT(INTEGER)
+INT WRITE_IN_MAP(INTEGER, STRING, INTEGER)
+INT TEXT_WIDTH(INTEGER, STRING)
+INT TEXT_HEIGHT(INTEGER, STRING)
+INT GET_TEXT_COLOR()
+INT SET_TEXT_COLOR(INTEGER)
+INT WRITE_VAR(INTEGER, INTEGER, INTEGER, INTEGER, VARIABLE)
+INT WRITE_FLOAT(INTEGER, INTEGER, INTEGER, INTEGER, POINTER)
+INT WRITE_STRING(INTEGER, INTEGER, INTEGER, INTEGER, POINTER)
+
+
+Module Dependency:
+
+libgrbase
+libblit
+libtext
+libfont
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_time.dll
+
+Functions:
+
+INT GET_TIMER()
+INT TIME()
+STRING FTIME(STRING, INTEGER)
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_timers.dll
+
+Globals:
+
+timer[9];
+
+
+Globals vars dependency:
+
+timer
+
+
+Hooks at priorities: 100
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_video.dll
+
+Functions:
+
+INT SET_MODE(INTEGER)
+INT SET_MODE(INTEGER, INTEGER)
+INT SET_MODE(INTEGER, INTEGER, INTEGER)
+INT SET_MODE(INTEGER, INTEGER, INTEGER, INTEGER)
+INT SET_FPS(INTEGER, INTEGER)
+POINTER GET_MODES(INTEGER, INTEGER)
+INT MODE_IS_OK(INTEGER, INTEGER, INTEGER, INTEGER)
+
+
+Module Dependency:
+
+libgrbase
+libvideo
+librender
+
+
+Globals vars dependency:
+
+graph_mode
+
+
+------------------------------------------------------- 
+Module Describe v1.1 (Build: Sep 15 2008 16:16:26)
+Copyright (C) 2008 SplinterGU
+This utility comes with ABSOLUTELY NO WARRANTY.
+moddesc -h for details
+
+Module name: mod_wm.dll
+
+Functions:
+
+INT SET_TITLE(STRING)
+INT SET_ICON(INTEGER, INTEGER)
+INT MINIMIZE()
+INT MOVE_WINDOW(INTEGER, INTEGER)
+INT SET_WINDOW_POS(INTEGER, INTEGER)
+INT GET_WINDOW_POS(POINTER, POINTER)
+INT GET_WINDOW_SIZE(POINTER, POINTER, POINTER, POINTER)
+INT GET_DESKTOP_SIZE(POINTER, POINTER)
+
+
+Module Dependency:
+
+libgrbase
+libvideo
+libwm
+
+
+------------------------------------------------------- 

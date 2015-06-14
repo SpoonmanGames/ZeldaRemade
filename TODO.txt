@@ -1,0 +1,15 @@
+- Agrandar el area de colision de las piedras grandes
+- Revisar el area de colision de los arboles
+- Hacer el puente de 5,6 (que un mango cubra a link9
+- Que el cambio de mapa respete correctamente las colisiones
+- Crear sistema de ingreso a cuevas y escaleras
+- Animación del agua
+- Animacion al caminar sobre el pasto
+- Animacion de link usando su espada
+- Sistema para cortar el pasto
+- Cueva donde se encuentra la espada
+- Enemigos de la región del Demo
+- Sistema de Drops
+- Sistema de Energía
+- Sistema de inventario
+- Menú principal y presentación

@@ -1,0 +1,73 @@
+zelda dev:
+
+v0.0.9: 19 marzo del 2012
+
+- Resolucion 512x336, Modo Ventana, 32 bits de colores soportado
+
+- Corre a 60 FPS sin problemas
+
+- 12 Mapas del Overworld Actualizados [12/128]
+
+- 1 Mapa del primer dungeon [1/17]
+
+- Animacion de link: izq, der, up, down completados
+
+- Arreglado defectos de gameplay de Zelda NES original:
+	- Presionar más de una tecla de movimiento ya no detiene a link
+	
+- Arreglado defectos de gameplay de Zelda SNES original:
+	- Moverse presionando direcciones opuestas cambia correctamente el grafico
+	
+- Colisiones simples funcionando: Choque con objetos fijos
+
+- Mapa inicial montado sin animaciones extras
+
+v0.0.12: 21 marzo del 2012
+
+- Sistema general de cambio entre pantallas completado
+
+- 12 Mapas montados sin animaciones extras, 11 de ellos sin colisiones
+
+- "Overworld Theme" NES y SNES version funcionando
+
+v0.0.15: 22 marzo del 2012
+
+- Los 12 mapas montados tienen el sistema de colisiones funcionando
+
+- Sistema de coordenadas beta para identificar la posicion en la que se encuentra link
+
+- "Overworld Theme" NES y SNES version funcionando de forma Loopeable
+
+v0.0.20: 23 marzo del 2012
+
+- Ahora Link funciona con logica de estados
+
+- Correcion en la posicion de link al cambiar de un mapa a otro
+
+- Correcion con la animacion de Link de izquierda a derecha, link ya no parece estar con ritalin cuando se mueve
+  en esas direcciones
+
+- Correccion en la posicion de mapas, habia un error de 1 pixel en la posicion
+
+- Mapa 7,7 con animaciones, pero aun sin interacciones (cueva y pasto)
+
+v0.0.22: 04 marzo del 2012
+
+- Logica de movimiento entre escenarios para animaciones estaticas arreglado.
+
+- Mapas con problemas de colisiones debido a la mala posicion de algunas piedras y arboles arreglado.
+
+v0.0.23: 05 marzo del 2012
+
+- 9 de 12 mapas con animaciones de flores funcionando integramente
+
+v0.0.25: 06 marzo del 2012
+
+- 12 de 12 mapas con animaciones de flores funcionando integramente
+
+- Mapa Overworld actualizado
+
+v0.0.26: 09 marzo del 2012
+
+- Nuevo sistema para el cambio de mapa: Link es ajustado durante la transición evitando de forma parcial
+  algunos obstaculos como las esquinas
