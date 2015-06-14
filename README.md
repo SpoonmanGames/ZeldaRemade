@@ -19,7 +19,7 @@ El test de Zelda Remade es la versión 0.0.26 del juego, te aconsejo revisar los
 
 # Última versión
 
-La última versión en este repositorio es la v0.0.19 - *¿ Qué? ¿pero no que el test descargable es una versión superior=* - pues este código fuente ha sido rescatado y desenpolvado de lo más profundo de mi computador, si en algún momento logro encontrar la última versión del código fuente la subiré a este repositorio.
+La última versión en este repositorio es la v0.0.19 - *¿ Qué? ¿pero no que el test descargable es una versión superior?* - pues este código fuente ha sido rescatado y desenpolvado de lo más profundo de mi computador, si en algún momento logro encontrar la última versión del código fuente la subiré a este repositorio.
 
 Los controles y menú son iguales al test por lo que se recomienda revisar la [FAQ de uso](https://github.com/SpoonmanGames/ZeldaRemade/releases/tag/v0.0.26).
 
